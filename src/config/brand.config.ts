@@ -7,43 +7,52 @@ type Palette = {
   ink: string;
   muted: string;
   border: string;
-  primary: string; // verde mata
+  primary: string; // verde bandeira
   onPrimary: string;
-  accent: string; // amarelo ipê
+  accent: string; // amarelo ouro
   onAccent: string;
-  secondary: string; // azul rio
+  secondary: string; // azul céu (foco, links)
+  hero: string; // verde da vitrine: igual no claro e no escuro
+  onHero: string;
+  flagBlue: string; // azul da faixa tricolor
 };
 
 export const brand = {
   name: process.env.NEXT_PUBLIC_BRAND_NAME ?? "Palavra-Visual",
   shortName: process.env.NEXT_PUBLIC_BRAND_SHORT_NAME ?? "Palavra",
   logo: "/icons/logo.svg",
-  themeColor: "#0A7B4F",
-  backgroundColor: "#FBFAF6",
+  themeColor: "#00843D",
+  backgroundColor: "#F4FAF5",
   colors: {
     light: {
-      background: "#FBFAF6",
+      background: "#F4FAF5",
       surface: "#FFFFFF",
-      ink: "#14201A",
-      muted: "#5B6B62",
-      border: "#E4E2D8",
-      primary: "#0A7B4F",
+      ink: "#0B1F33",
+      muted: "#4F5F6E",
+      border: "#D6E8DB",
+      primary: "#00843D",
       onPrimary: "#FFFFFF",
-      accent: "#F6B400",
-      onAccent: "#14201A",
-      secondary: "#1F57C3",
+      accent: "#FFDF00",
+      onAccent: "#002776",
+      secondary: "#1D4FB8",
+      hero: "#00843D",
+      onHero: "#FFFFFF",
+      flagBlue: "#002776",
     },
     dark: {
-      background: "#0E1512",
-      surface: "#16201B",
-      ink: "#EEF3EF",
-      muted: "#9DB0A5",
-      border: "#26332C",
-      primary: "#34C98A",
-      onPrimary: "#0E1512",
-      accent: "#F6B400",
-      onAccent: "#14201A",
-      secondary: "#6C9BFF",
+      background: "#07140E",
+      surface: "#0F2018",
+      ink: "#EEF6F0",
+      muted: "#9DB8A8",
+      border: "#1E3A2B",
+      primary: "#2FD073",
+      onPrimary: "#07140E",
+      accent: "#FFDF00",
+      onAccent: "#002776",
+      secondary: "#7FA6FF",
+      hero: "#00843D",
+      onHero: "#FFFFFF",
+      flagBlue: "#002776",
     },
   } satisfies Record<"light" | "dark", Palette>,
 } as const;

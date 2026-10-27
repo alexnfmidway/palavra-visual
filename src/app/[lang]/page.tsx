@@ -1,11 +1,11 @@
 import { Suspense } from "react";
-import Link from "next/link";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { BottomNav } from "@/components/BottomNav";
 import { RecentPosts } from "@/components/RecentPosts";
 import { HeaderAccount } from "@/components/HeaderAccount";
 import { InterestPicker } from "@/components/InterestPicker";
 import { Logo } from "@/components/Logo";
+import { Hero } from "@/components/Hero";
 
 export default async function HomePage() {
   const locale = await getLocale();
@@ -14,6 +14,11 @@ export default async function HomePage() {
   return (
     <>
       <header className="border-b border-line bg-surface">
+        <div className="flex h-1.5" aria-hidden="true">
+          <span className="flex-1 bg-hero" />
+          <span className="flex-1 bg-accent" />
+          <span className="flex-1 bg-flag-blue" />
+        </div>
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
           <Logo />
           <HeaderAccount t={t.auth} locale={locale} />
@@ -21,16 +26,7 @@ export default async function HomePage() {
       </header>
 
       <main id="conteudo" className="mx-auto max-w-2xl space-y-8 px-4 pb-28 pt-8">
-        <section className="space-y-3">
-          <h1 className="font-display text-3xl font-bold leading-tight sm:text-4xl">{t.home.title}</h1>
-          <p className="text-lg text-muted">{t.home.lead}</p>
-          <Link
-            href={`/${locale}/criar`}
-            className="inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary"
-          >
-            {t.home.cta}
-          </Link>
-        </section>
+        <Hero title={t.home.title} lead={t.home.lead} cta={t.home.cta} href={`/${locale}/criar`} />
 
         <section aria-labelledby="recentes" className="space-y-3">
           <h2 id="recentes" className="font-display text-xl font-bold">
