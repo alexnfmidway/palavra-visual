@@ -50,18 +50,18 @@ async function ProfileContent({ params }: { params: PageProps<"/[lang]/u/[handle
   const grid = await listGrid({ authorId: profile.id });
 
   const stat = (value: number, label: string) => (
-    <li className="text-center">
+    <li className="min-w-0 text-center">
       <span className="block font-display text-xl font-bold">{formatCompact(value, locale)}</span>
-      <span className="text-sm text-muted">{label}</span>
+      <span className="block truncate text-xs text-muted sm:text-sm">{label}</span>
     </li>
   );
 
   return (
     <div className="space-y-6">
       <section className="space-y-4">
-        <div className="flex items-center gap-5">
-          <Avatar displayName={profile.displayName} avatarUrl={profile.avatarUrl} size={88} />
-          <ul className="grid flex-1 grid-cols-3 gap-2">
+        <div className="flex items-center gap-4">
+          <Avatar displayName={profile.displayName} avatarUrl={profile.avatarUrl} size={80} />
+          <ul className="grid min-w-0 flex-1 grid-cols-3 gap-1">
             {stat(profile.postCount, t.follow.posts)}
             {stat(profile.followerCount, t.follow.followers)}
             {stat(profile.followingCount, t.follow.followingCount)}

@@ -222,7 +222,8 @@ export async function listGrid({
 }): Promise<GridPost[]> {
   const conditions = [eq(posts.visibility, "public"), isNull(posts.deletedAt)];
   if (authorId) conditions.push(eq(posts.authorId, authorId));
-  if (onlyWithMedia) conditions.push(sql`exists (select 1 from ${postMedia} where ${postMedia.postId} = ${posts.id})`);
+  // Texto literal: dentro da consulta relacional o Drizzle reescreve as colunas de postMedia para "posts".
+  if (onlyWithMedia) conditions.push(sql`exists (select 1 from "post_media" "pm" where "pm"."post_id" = ${posts.id})`);
 
   const rows = await getDb().query.posts.findMany({
     where: and(...conditions),
