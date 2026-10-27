@@ -10,8 +10,7 @@
     "discover": "Descobrir",
     "create": "Criar",
     "notifications": "Avisos",
-    "profile": "Perfil",
-    "soon": "em breve"
+    "profile": "Perfil"
   },
   "home": {
     "title": "Mostre o Brasil que você vive.",
@@ -76,7 +75,11 @@
     "captionPlaceholder": "Conte o que você quer mostrar. Use #hashtags para ser encontrado.",
     "charsLeft": "{n} caracteres restantes",
     "commentsLabel": "Quem pode comentar",
-    "comments": { "everyone": "Todo mundo", "followers": "Quem eu sigo", "nobody": "Ninguém" },
+    "comments": {
+      "everyone": "Todo mundo",
+      "followers": "Quem eu sigo",
+      "nobody": "Ninguém"
+    },
     "publicNote": "Por enquanto, todas as publicações são públicas.",
     "preview": "Ver prévia",
     "back": "Voltar e editar",
@@ -105,11 +108,108 @@
     "loading": "Carregando publicações…",
     "justNow": "agora",
     "imageAlt": "Imagem publicada por @{handle}",
-    "back": "Voltar ao início"
+    "back": "Voltar ao início",
+    "like": "Curtir",
+    "unlike": "Remover curtida",
+    "likes": "{n} curtidas",
+    "comments": "Comentários",
+    "commentsCount": "{n} comentários",
+    "openComments": "Ver comentários",
+    "commentLabel": "Escreva um comentário",
+    "commentPlaceholder": "Adicione um comentário…",
+    "commentSend": "Publicar",
+    "commentSending": "Enviando…",
+    "commentsEmpty": "Ainda não há comentários. Comece a conversa!",
+    "commentsClosed": "Os comentários estão desativados nesta publicação.",
+    "commentsFollowers": "Só quem a pessoa autora segue pode comentar aqui.",
+    "signInToInteract": "Entre na sua conta para curtir e comentar.",
+    "commentDelete": "Excluir comentário",
+    "commentErrors": {
+      "unauthorized": "Entre na sua conta para comentar.",
+      "empty": "Escreva algo para comentar.",
+      "tooLong": "O comentário passou de 500 caracteres.",
+      "closed": "Os comentários estão fechados para você nesta publicação.",
+      "rateLimited": "Você comentou muito em pouco tempo. Espere um pouco.",
+      "generic": "Não foi possível comentar agora. Tente de novo."
+    }
   },
   "offline": {
     "title": "Você está sem conexão",
     "body": "Confira a internet e tente de novo. Assim que voltar, tudo continua de onde parou.",
     "retry": "Tentar de novo"
+  },
+  "feed": {
+    "tabForYou": "Para você",
+    "tabFollowing": "Seguindo",
+    "tabsLabel": "Tipo de feed",
+    "composePrompt": "No que você está pensando, {name}?",
+    "followingEmpty": "Você ainda não vê nada por aqui. Siga pessoas para ver as publicações delas.",
+    "suggestionsTitle": "Pessoas para seguir",
+    "suggestionsEmpty": "Quando mais gente entrar, as sugestões aparecem aqui."
+  },
+  "follow": {
+    "follow": "Seguir",
+    "following": "Seguindo",
+    "unfollow": "Deixar de seguir",
+    "editProfile": "Editar perfil",
+    "followers": "seguidores",
+    "followingCount": "seguindo",
+    "posts": "publicações",
+    "signInToFollow": "Entre para seguir",
+    "error": "Não foi possível concluir. Tente de novo."
+  },
+  "profile": {
+    "noPosts": "Ainda não há publicações.",
+    "noPostsMine": "Você ainda não publicou. Que tal começar agora?",
+    "gridLabel": "Publicações de @{handle}",
+    "multiple": "Várias fotos",
+    "video": "Vídeo",
+    "yourProfile": "Meu perfil"
+  },
+  "editProfile": {
+    "title": "Editar perfil",
+    "name": "Nome",
+    "bio": "Sobre você",
+    "bioHint": "Até 160 caracteres.",
+    "avatar": "Foto de perfil",
+    "changeAvatar": "Escolher foto",
+    "removeAvatar": "Remover foto",
+    "save": "Salvar",
+    "saving": "Salvando…",
+    "signInRequired": "Entre na sua conta para editar o perfil.",
+    "errors": {
+      "unauthorized": "Entre na sua conta para editar o perfil.",
+      "invalidName": "O nome precisa ter de 1 a 50 caracteres.",
+      "bioTooLong": "O texto passou de 160 caracteres.",
+      "invalidAvatar": "Não foi possível validar a foto. Tente de novo.",
+      "invalidType": "Formato não aceito. Use JPG, PNG ou WebP.",
+      "unreadable": "Não foi possível ler essa foto.",
+      "uploadFailed": "O envio da foto falhou. Confira a conexão e tente de novo.",
+      "generic": "Não foi possível salvar agora. Tente de novo."
+    }
+  },
+  "discover": {
+    "title": "Descobrir",
+    "searchLabel": "Buscar pessoas e #hashtags",
+    "searchPlaceholder": "Buscar pessoas ou #hashtags",
+    "search": "Buscar",
+    "clear": "Limpar busca",
+    "trending": "Assuntos do momento",
+    "trendingEmpty": "As #hashtags mais usadas aparecem aqui.",
+    "people": "Pessoas",
+    "noPeople": "Ninguém encontrado com esse nome.",
+    "recent": "Novidades",
+    "postsWithTag": "Publicações com #{tag}",
+    "noPostsWithTag": "Ainda não há publicações com essa #hashtag.",
+    "searchTag": "Ver publicações com #{tag}"
+  },
+  "activity": {
+    "title": "Avisos",
+    "empty": "Quando alguém curtir, comentar ou seguir você, aparece aqui.",
+    "signInRequired": "Entre na sua conta para ver seus avisos.",
+    "signIn": "Entrar",
+    "liked": "curtiu sua publicação.",
+    "commented": "comentou:",
+    "followed": "começou a seguir você."
   }
 }

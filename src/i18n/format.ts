@@ -30,6 +30,18 @@ export function formatDateTime(
   );
 }
 
+/** "há 5 min", "há 2 h", "há 3 dias"; passada uma semana, a data curta. */
+export function formatRelative(value: Date | string | number, locale: Locale, now: number = Date.now()) {
+  const seconds = Math.round((new Date(value).getTime() - now) / 1000);
+  const abs = Math.abs(seconds);
+  const rtf = new Intl.RelativeTimeFormat(locale, { numeric: "auto", style: "short" });
+  if (abs < 60) return rtf.format(0, "second");
+  if (abs < 3600) return rtf.format(Math.round(seconds / 60), "minute");
+  if (abs < 86400) return rtf.format(Math.round(seconds / 3600), "hour");
+  if (abs < 7 * 86400) return rtf.format(Math.round(seconds / 86400), "day");
+  return formatDate(value, locale, { dateStyle: "medium" });
+}
+
 export function formatNumber(value: number, locale: Locale) {
   return new Intl.NumberFormat(locale).format(value);
 }

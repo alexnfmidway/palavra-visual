@@ -17,11 +17,13 @@ export async function POST(request: Request) {
       request,
       getSignedToken: async (pathname, clientPayload) => {
         if (!session) throw new Error("Entre na sua conta para enviar mídia.");
-        if (!pathname.startsWith(`posts/${session.user.id}/`)) throw new Error("Caminho de upload inválido.");
+        const isAvatar = pathname.startsWith(`avatars/${session.user.id}/`);
+        if (!isAvatar && !pathname.startsWith(`posts/${session.user.id}/`)) throw new Error("Caminho de upload inválido.");
 
-        const isVideo = clientPayload === "video";
+        // Foto de perfil: só imagem, e pequena.
+        const isVideo = !isAvatar && clientPayload === "video";
         const allowedContentTypes = [...(isVideo ? mediaLimits.videoTypes : mediaLimits.imageTypes)];
-        const maximumSizeInBytes = isVideo ? mediaLimits.videoMaxBytes : mediaLimits.imageMaxBytes;
+        const maximumSizeInBytes = isVideo ? mediaLimits.videoMaxBytes : isAvatar ? 2 * 1024 * 1024 : mediaLimits.imageMaxBytes;
 
         const token = await issueSignedToken({
           pathname,

@@ -48,13 +48,13 @@ export function extractHashtags(caption: string): string[] {
 }
 
 /** A mídia precisa estar no nosso Blob e dentro da pasta do próprio autor. */
-export function isOwnMediaUrl(value: string, userId: string) {
+export function isOwnMediaUrl(value: string, userId: string, folder: "posts" | "avatars" = "posts") {
   try {
     const url = new URL(value);
     return (
       url.protocol === "https:" &&
       url.hostname.endsWith(".public.blob.vercel-storage.com") &&
-      url.pathname.startsWith(`/posts/${userId}/`)
+      url.pathname.startsWith(`/${folder}/${userId}/`)
     );
   } catch {
     return false;

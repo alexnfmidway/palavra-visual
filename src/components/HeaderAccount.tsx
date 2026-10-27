@@ -25,7 +25,9 @@ export function HeaderAccount({ t, locale }: { t: Dictionary["auth"]; locale: Lo
 
   return (
     <div className="flex items-center gap-3 text-sm">
-      <span className="font-semibold">@{session.user.handle}</span>
+      <Link href={`/${locale}/perfil`} className="inline-flex min-h-11 items-center font-semibold">
+        @{session.user.handle}
+      </Link>
       <button
         type="button"
         onClick={async () => {
