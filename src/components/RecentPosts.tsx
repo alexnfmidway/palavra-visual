@@ -1,9 +1,13 @@
+import { connection } from "next/server";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 import { formatDateTime } from "@/i18n/format";
 import { listRecentPosts } from "@/lib/posts/queries";
 import { PostCard } from "./PostCard";
 
 export async function RecentPosts() {
+  // O feed depende do banco e muda a cada publicação: só é montado quando alguém
+  // abre a página, nunca durante o build (que roda sem acesso ao banco).
+  await connection();
   const [locale, t, posts] = await Promise.all([getLocale(), getDictionary(), listRecentPosts()]);
 
   if (posts.length === 0) return <p className="text-muted">{t.post.empty}</p>;
