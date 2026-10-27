@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Sem conexão</title>
+    <style>
+      :root { --bg: #fbfaf6; --ink: #14201a; --muted: #5b6b62; --primary: #0a7b4f; --on: #fff; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #0e1512; --ink: #eef3ef; --muted: #9db0a5; --primary: #34c98a; --on: #0e1512; }
+      }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+        background: var(--bg); color: var(--ink); font-family: system-ui, sans-serif; text-align: center; }
+      main { max-width: 28rem; }
+      h1 { font-size: 1.75rem; margin: 0 0 .5rem; }
+      p { color: var(--muted); line-height: 1.5; }
+      button { min-height: 48px; padding: 0 24px; border: 0; border-radius: 999px; font-size: 1rem;
+        font-weight: 600; background: var(--primary); color: var(--on); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Você está sem conexão</h1>
+      <p>Confira a internet e tente de novo. Assim que voltar, tudo continua de onde parou.</p>
+      <button type="button" onclick="location.reload()">Tentar de novo</button>
+    </main>
+  </body>
+</html>

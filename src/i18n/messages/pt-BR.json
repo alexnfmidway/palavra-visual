@@ -1,0 +1,115 @@
+{
+  "app": {
+    "tagline": "Sua voz, em imagens.",
+    "description": "Rede social brasileira para compartilhar fotos, vídeos e palavras.",
+    "skipToContent": "Pular para o conteúdo"
+  },
+  "nav": {
+    "label": "Navegação principal",
+    "home": "Início",
+    "discover": "Descobrir",
+    "create": "Criar",
+    "notifications": "Avisos",
+    "profile": "Perfil",
+    "soon": "em breve"
+  },
+  "home": {
+    "title": "Mostre o Brasil que você vive.",
+    "lead": "Foto, vídeo e uma frase. Em poucos passos a sua história está no ar.",
+    "cta": "Criar publicação",
+    "interestsTitle": "Explore por interesse",
+    "interestsHint": "Escolha o que quiser ver. Você muda isso quando quiser.",
+    "interests": [
+      "Música e dança",
+      "Futebol e esportes",
+      "Gastronomia",
+      "Humor",
+      "Pequenos negócios",
+      "Educação e tecnologia",
+      "Natureza e turismo",
+      "Cotidiano e família",
+      "Projetos sociais",
+      "Cultura local"
+    ],
+    "placeCardTitle": "Do bairro ao Brasil",
+    "placeCardBody": "Descubra o que acontece na sua cidade e na sua região. Informar a localização é opcional e nunca mostramos o ponto exato."
+  },
+  "auth": {
+    "signIn": "Entrar",
+    "signOut": "Sair",
+    "signUp": "Criar conta",
+    "signInTitle": "Entrar na sua conta",
+    "signUpTitle": "Criar sua conta",
+    "signUpLead": "Só precisamos de um nome, um @usuário, e-mail e senha. Nada de CPF ou telefone.",
+    "name": "Nome",
+    "handle": "Nome de usuário",
+    "handleHint": "De 3 a 20 letras minúsculas, números ou sublinhado.",
+    "email": "E-mail",
+    "password": "Senha",
+    "passwordHint": "Pelo menos 8 caracteres.",
+    "submitSignIn": "Entrar",
+    "submitSignUp": "Criar conta",
+    "working": "Aguarde…",
+    "haveAccount": "Já tem conta?",
+    "noAccount": "Ainda não tem conta?",
+    "errors": {
+      "invalidCredentials": "E-mail ou senha incorretos.",
+      "passwordTooShort": "A senha precisa ter pelo menos 8 caracteres.",
+      "invalidEmail": "Esse e-mail não parece válido.",
+      "invalidHandle": "O nome de usuário deve ter de 3 a 20 letras minúsculas, números ou sublinhado.",
+      "createFailed": "Não foi possível criar a conta. O e-mail ou o nome de usuário pode já estar em uso.",
+      "generic": "Algo deu errado. Tente de novo em instantes."
+    }
+  },
+  "create": {
+    "title": "Criar publicação",
+    "signInRequired": "Entre na sua conta para publicar.",
+    "signIn": "Entrar",
+    "stepWrite": "1. Escrever",
+    "stepPreview": "2. Prévia",
+    "addMedia": "Adicionar foto ou vídeo",
+    "mediaHint": "Até 10 fotos ou 1 vídeo de até 30 segundos. As fotos são reduzidas e perdem os dados da câmera, como a localização.",
+    "remove": "Remover",
+    "altLabel": "Texto alternativo (opcional)",
+    "altHint": "Descreva a imagem para quem usa leitor de tela.",
+    "captionLabel": "Legenda, frase ou história",
+    "captionPlaceholder": "Conte o que você quer mostrar. Use #hashtags para ser encontrado.",
+    "charsLeft": "{n} caracteres restantes",
+    "commentsLabel": "Quem pode comentar",
+    "comments": { "everyone": "Todo mundo", "followers": "Quem eu sigo", "nobody": "Ninguém" },
+    "publicNote": "Por enquanto, todas as publicações são públicas.",
+    "preview": "Ver prévia",
+    "back": "Voltar e editar",
+    "publish": "Publicar",
+    "publishing": "Publicando…",
+    "uploading": "Enviando mídia… {pct}%",
+    "errors": {
+      "unauthorized": "Entre na sua conta para publicar.",
+      "empty": "Adicione uma foto, um vídeo ou escreva algo para publicar.",
+      "tooManyMedia": "Use no máximo 10 fotos por publicação.",
+      "mixedMedia": "Use várias fotos ou um único vídeo, sem misturar.",
+      "captionTooLong": "A legenda passou do limite de 2.200 caracteres.",
+      "invalidMedia": "Não foi possível validar a mídia enviada. Tente de novo.",
+      "rateLimited": "Você publicou muito em pouco tempo. Espere um pouco e tente de novo.",
+      "invalidType": "Formato não aceito. Use JPG, PNG ou WebP para fotos e MP4 ou WebM para vídeo.",
+      "fileTooLarge": "Esse arquivo é grande demais. Fotos: até 30 MB. Vídeos: até 25 MB.",
+      "videoTooLong": "O vídeo passa de 30 segundos.",
+      "unreadable": "Não foi possível ler esse arquivo.",
+      "uploadFailed": "O envio da mídia falhou. Confira a conexão e tente de novo.",
+      "generic": "Algo deu errado ao publicar. Tente de novo em instantes."
+    }
+  },
+  "post": {
+    "recent": "Publicações recentes",
+    "empty": "Ainda não há publicações. Que tal ser a primeira pessoa a publicar?",
+    "loading": "Carregando publicações…",
+    "justNow": "agora",
+    "imageAlt": "Imagem publicada por @{handle}",
+    "back": "Voltar ao início"
+  },
+  "offline": {
+    "title": "Você está sem conexão",
+    "body": "Confira a internet e tente de novo. Assim que voltar, tudo continua de onde parou.",
+    "retry": "Tentar de novo"
+  }
+}
