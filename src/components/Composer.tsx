@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { upload } from "@vercel/blob/client";
+import { uploadPresigned } from "@vercel/blob/client";
 import { authClient } from "@/lib/auth/client";
 import { createPostAction } from "@/lib/posts/actions";
 import { ALT_MAX, CAPTION_MAX, COMMENT_POLICIES, type CommentPolicy, type MediaInput } from "@/lib/posts/validation";
@@ -168,7 +168,7 @@ export function Composer({ t, tPost, locale }: Props) {
         throw new ComposerError("fileTooLarge");
       }
 
-      const blob = await upload(`posts/${userId}/${crypto.randomUUID()}.${extensionOf(contentType)}`, body, {
+      const blob = await uploadPresigned(`posts/${userId}/${crypto.randomUUID()}.${extensionOf(contentType)}`, body, {
         access: "public",
         handleUploadUrl: "/api/media/upload",
         clientPayload: item.kind,
