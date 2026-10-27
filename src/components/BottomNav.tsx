@@ -29,7 +29,7 @@ export function BottomNav({ t, locale, current }: { t: Dictionary["nav"]; locale
               <Link
                 href={`/${locale}${href}`}
                 aria-current={key === current ? "page" : undefined}
-                className={`${base} ${key === current ? "font-semibold text-primary" : "text-muted"}`}
+                className={`${base} ${key === current ? "font-semibold text-link" : "text-muted"}`}
               >
                 {t[key]}
               </Link>

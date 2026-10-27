@@ -228,10 +228,10 @@ export function Composer({ t, tPost, locale }: Props) {
   return (
     <div className="space-y-6">
       <ol className="flex gap-4 text-sm" aria-label={t.title}>
-        <li className={step === "write" ? "font-bold text-primary" : "text-muted"} aria-current={step === "write" ? "step" : undefined}>
+        <li className={step === "write" ? "font-bold text-link" : "text-muted"} aria-current={step === "write" ? "step" : undefined}>
           {t.stepWrite}
         </li>
-        <li className={step === "preview" ? "font-bold text-primary" : "text-muted"} aria-current={step === "preview" ? "step" : undefined}>
+        <li className={step === "preview" ? "font-bold text-link" : "text-muted"} aria-current={step === "preview" ? "step" : undefined}>
           {t.stepPreview}
         </li>
       </ol>

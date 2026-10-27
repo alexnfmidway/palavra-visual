@@ -134,7 +134,7 @@ export function AuthForm({ mode, t, locale }: Props) {
 
       <p className="text-center text-sm text-muted">
         {signUp ? t.haveAccount : t.noAccount}{" "}
-        <Link href={`/${locale}/${signUp ? "entrar" : "criar-conta"}`} className="font-semibold text-primary underline">
+        <Link href={`/${locale}/${signUp ? "entrar" : "criar-conta"}`} className="font-semibold text-link underline">
           {signUp ? t.signIn : t.signUp}
         </Link>
       </p>

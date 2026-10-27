@@ -12,13 +12,13 @@ export function Hero({ title, lead, cta, href }: Props) {
   const photos = showcasePhotos.slice(0, 4);
 
   return (
-    <section className="overflow-hidden rounded-3xl bg-hero text-on-hero">
+    <section className="overflow-hidden rounded-3xl bg-linear-to-br from-hero-from via-hero-via to-hero-to text-on-hero">
       <div className="space-y-4 p-6 sm:p-8">
         <h1 className="font-display text-3xl font-bold leading-tight sm:text-4xl">{title}</h1>
-        <p className="text-lg opacity-95">{lead}</p>
+        <p className="text-lg opacity-90">{lead}</p>
         <Link
           href={href}
-          className="inline-flex min-h-12 items-center rounded-full bg-accent px-6 font-semibold text-on-accent"
+          className="inline-flex min-h-12 items-center rounded-full bg-primary px-6 font-semibold text-on-primary shadow-sm"
         >
           {cta}
         </Link>
@@ -39,11 +39,11 @@ export function Hero({ title, lead, cta, href }: Props) {
           ))}
         </ul>
       ) : (
-        <svg viewBox="0 0 400 120" aria-hidden="true" className="block w-full">
-          <rect width="400" height="120" fill="var(--brand-flag-blue)" />
-          <path d="M200 8 372 60 200 112 28 60Z" fill="var(--brand-accent)" />
-          <circle cx="200" cy="60" r="38" fill="var(--brand-flag-blue)" />
-          <path d="M166 62q17-20 34 0t34 0" fill="none" stroke="var(--brand-surface)" strokeWidth="7" strokeLinecap="round" />
+        <svg viewBox="0 0 400 110" aria-hidden="true" className="block w-full">
+          <circle cx="92" cy="70" r="52" fill="var(--brand-primary)" opacity="0.85" />
+          <circle cx="200" cy="52" r="52" fill="var(--brand-accent)" opacity="0.9" />
+          <circle cx="308" cy="70" r="52" fill="var(--brand-stripe-blue)" opacity="0.85" />
+          <path d="M40 92q40-34 80 0t80 0t80 0t80 0" fill="none" stroke="var(--brand-surface)" strokeWidth="8" strokeLinecap="round" opacity="0.9" />
         </svg>
       )}
     </section>

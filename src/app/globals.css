@@ -12,9 +12,12 @@
   --color-accent: var(--brand-accent);
   --color-on-accent: var(--brand-on-accent);
   --color-secondary: var(--brand-secondary);
-  --color-hero: var(--brand-hero);
+  --color-link: var(--brand-link);
+  --color-hero-from: var(--brand-hero-from);
+  --color-hero-via: var(--brand-hero-via);
+  --color-hero-to: var(--brand-hero-to);
   --color-on-hero: var(--brand-on-hero);
-  --color-flag-blue: var(--brand-flag-blue);
+  --color-stripe-blue: var(--brand-stripe-blue);
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
 }

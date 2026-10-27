@@ -14,11 +14,7 @@ export default async function HomePage() {
   return (
     <>
       <header className="border-b border-line bg-surface">
-        <div className="flex h-1.5" aria-hidden="true">
-          <span className="flex-1 bg-hero" />
-          <span className="flex-1 bg-accent" />
-          <span className="flex-1 bg-flag-blue" />
-        </div>
+        <div className="h-1 bg-linear-to-r from-primary via-accent to-stripe-blue" aria-hidden="true" />
         <div className="mx-auto flex max-w-2xl items-center justify-between px-4 py-3">
           <Logo />
           <HeaderAccount t={t.auth} locale={locale} />

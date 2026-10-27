@@ -51,7 +51,7 @@ async function PostContent({ params }: { params: PageProps<"/[lang]/p/[id]">["pa
           dateLabel={formatDateTime(post.createdAt, locale)}
           t={t.post}
         />
-        <Link href={`/${locale}`} className="inline-flex min-h-11 items-center font-semibold text-primary underline">
+        <Link href={`/${locale}`} className="inline-flex min-h-11 items-center font-semibold text-link underline">
           {t.post.back}
         </Link>
       </main>

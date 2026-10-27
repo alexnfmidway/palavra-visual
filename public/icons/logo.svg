@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Palavra-Visual">
-  <rect width="512" height="512" rx="112" fill="#00843D"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2BD48A"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
   <path d="M136 136h240a40 40 0 0 1 40 40v128a40 40 0 0 1-40 40H252l-72 60v-60h-44a40 40 0 0 1-40-40V176a40 40 0 0 1 40-40z" fill="#FFFFFF"/>
-  <circle cx="196" cy="216" r="30" fill="#FFDF00"/>
-  <path d="M120 296q44-52 88 0t88 0t88 0" fill="none" stroke="#002776" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="196" cy="216" r="30" fill="#FFD84D"/>
+  <path d="M120 296q44-52 88 0t88 0t88 0" fill="none" stroke="#2F6BFF" stroke-width="18" stroke-linecap="round"/>
 </svg>

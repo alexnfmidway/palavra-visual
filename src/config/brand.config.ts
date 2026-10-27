@@ -7,52 +7,61 @@ type Palette = {
   ink: string;
   muted: string;
   border: string;
-  primary: string; // verde bandeira
+  primary: string; // verde menta vivo (preenchimentos; texto sobre ele é escuro)
   onPrimary: string;
-  accent: string; // amarelo ouro
+  link: string; // verde profundo para texto e links (contraste AA)
+  accent: string; // amarelo limão
   onAccent: string;
-  secondary: string; // azul céu (foco, links)
-  hero: string; // verde da vitrine: igual no claro e no escuro
+  secondary: string; // azul céu (hashtags, foco)
+  heroFrom: string; // gradiente da vitrine: menta -> limão -> céu
+  heroVia: string;
+  heroTo: string;
   onHero: string;
-  flagBlue: string; // azul da faixa tricolor
+  stripeBlue: string; // fim da faixa em gradiente do topo
 };
 
 export const brand = {
   name: process.env.NEXT_PUBLIC_BRAND_NAME ?? "Palavra-Visual",
   shortName: process.env.NEXT_PUBLIC_BRAND_SHORT_NAME ?? "Palavra",
   logo: "/icons/logo.svg",
-  themeColor: "#00843D",
-  backgroundColor: "#F4FAF5",
+  themeColor: "#2BD48A",
+  backgroundColor: "#F8FBF8",
   colors: {
     light: {
-      background: "#F4FAF5",
+      background: "#F8FBF8",
       surface: "#FFFFFF",
-      ink: "#0B1F33",
-      muted: "#4F5F6E",
-      border: "#D6E8DB",
-      primary: "#00843D",
-      onPrimary: "#FFFFFF",
-      accent: "#FFDF00",
-      onAccent: "#002776",
-      secondary: "#1D4FB8",
-      hero: "#00843D",
-      onHero: "#FFFFFF",
-      flagBlue: "#002776",
+      ink: "#0F1F2E",
+      muted: "#566673",
+      border: "#E2EEE6",
+      primary: "#2BD48A",
+      onPrimary: "#06281B",
+      link: "#087A4B",
+      accent: "#FFD84D",
+      onAccent: "#0F1F2E",
+      secondary: "#2F6BFF",
+      heroFrom: "#C9F5DE",
+      heroVia: "#FFF3B0",
+      heroTo: "#CBE0FF",
+      onHero: "#0F1F2E",
+      stripeBlue: "#5B8CFF",
     },
     dark: {
-      background: "#07140E",
-      surface: "#0F2018",
-      ink: "#EEF6F0",
-      muted: "#9DB8A8",
-      border: "#1E3A2B",
-      primary: "#2FD073",
-      onPrimary: "#07140E",
-      accent: "#FFDF00",
-      onAccent: "#002776",
-      secondary: "#7FA6FF",
-      hero: "#00843D",
+      background: "#0A1410",
+      surface: "#122019",
+      ink: "#EEF6F1",
+      muted: "#9DB5A8",
+      border: "#1F3A2C",
+      primary: "#34DB92",
+      onPrimary: "#052B1A",
+      link: "#5BE3A6",
+      accent: "#FFD84D",
+      onAccent: "#0F1F2E",
+      secondary: "#8CB0FF",
+      heroFrom: "#0F4A34",
+      heroVia: "#1B4F5C",
+      heroTo: "#243C86",
       onHero: "#FFFFFF",
-      flagBlue: "#002776",
+      stripeBlue: "#5B8CFF",
     },
   } satisfies Record<"light" | "dark", Palette>,
 } as const;
